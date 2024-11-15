@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace whatwedo\CrudHistoryBundle\Controller;
 
-use araise\CrudBundle\Controller\CrudController;
-use araise\CrudBundle\Enums\Page;
-use araise\CrudBundle\Manager\DefinitionManager;
+use Araise\AraiseBundle\Controller\CrudController;
+use Araise\AraiseBundle\Enums\Page;
+use Araise\AraiseBundle\Manager\DefinitionManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use whatwedo\CrudHistoryBundle\Manager\HistoryManager;
@@ -27,12 +27,15 @@ class HistoryCrudController extends CrudController
             'id' => $entity->getId(),
         ]);
 
+        $view = $this->definition->createView(Page::SHOW, $entity);
+
         return $this->render(
             '@whatwedoCrudHistory/history/history.html.twig',
             [
                 'wwd_crud_enable_breadcrumbs' => true,
                 'transactionList' => $transactionList,
                 'entity' => $entity,
+                'view' => $view,
                 'entityTitle' => (new \ReflectionMethod($this->definition, 'getEntityTitle'))->isStatic() ? $this->definition::getEntityTitle() : $this->definition->getEntityTitle(),
             ]
         );

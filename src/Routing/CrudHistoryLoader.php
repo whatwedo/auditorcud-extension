@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace whatwedo\CrudHistoryBundle\Routing;
 
-use araise\CrudBundle\Manager\DefinitionManager;
+use Araise\AraiseBundle\Manager\DefinitionManager;
 use Symfony\Component\Config\Loader\Loader;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
