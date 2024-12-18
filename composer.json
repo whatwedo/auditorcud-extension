@@ -12,15 +12,13 @@
         }
     ],
     "require": {
-        "php":                      ">=8.2",
+        "php":                      ">=8.3",
         "symfony/security-bundle": "^6.4|^7.0",
-        "damienharper/auditor-bundle": "dev-master",
+        "damienharper/auditor-bundle": "^6.2.0",
         "symfony/form": "^6.4|^7.0",
+        "doctrine/common": "^3.0",
         "whatwedo/twig-bootstrap-icons": "^v1.1.1",
-        "araise/table-bundle": "^1.1",
-        "araise/core-bundle": "^1.1",
-        "araise/crud-bundle": "^1.1",
-        "araise/search-bundle": "^3.1"
+        "araise/araise-bundle": "@stable"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^7.0",

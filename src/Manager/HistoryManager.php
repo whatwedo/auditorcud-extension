@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace whatwedo\CrudHistoryBundle\Manager;
 
-use araise\CrudBundle\Manager\DefinitionManager;
+use Araise\AraiseBundle\Manager\DefinitionManager;
 use DH\Auditor\Model\Entry;
 use DH\Auditor\Provider\Doctrine\Persistence\Reader\Filter\SimpleFilter;
 use DH\Auditor\Provider\Doctrine\Persistence\Reader\Query;

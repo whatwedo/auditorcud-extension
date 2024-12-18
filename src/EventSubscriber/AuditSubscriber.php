@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace whatwedo\CrudHistoryBundle\EventSubscriber;
 
-use araise\CrudBundle\Event\CrudEvent;
+use Araise\AraiseBundle\Crud\Event\CrudEvent;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use whatwedo\CrudHistoryBundle\Entity\AuditManyToOneTriggerInterface;
